@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Services</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-progress-bar color="primary" value="0.25"></ion-progress-bar>
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center"> What service do you require today? </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-button class="service-button" expand="full" color="secondary" (click)="enterMoveMode()">Residential move</ion-button>
+      <ion-button class="service-button" expand="full" color="secondary" (click)="enterDeliveryMode()">Single item delivery </ion-button>
+      <ion-button class="service-button" disabled expand="full" color="secondary">Shop<i>(Coming soon!)</i></ion-button>
+    </ion-card-content>
+
+  </ion-card>
+
+
+
+</ion-content>

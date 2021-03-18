@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Booking</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-progress-bar color="primary" value="1.0"></ion-progress-bar>
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title>Here's your quote</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+       <ion-text id="price" color="primary">{{formService.calculatePrice()}}$</ion-text>
+       <ion-text >+tax</ion-text>
+       <div id="summary">
+         <ion-text><b>Summary:</b></ion-text>
+         <ul>
+           <li>{{getOrderType()}}</li>
+           <li>For {{formService.user.email}}</li>
+           <li>Date: {{formService.time.date.slice(0, formService.time.date.indexOf("T"))}}</li>
+           <li>From: {{formService.time.from}} to {{formService.time.to}}</li>
+           <li>{{formService.hourlyPrice}}$ per hour</li>
+         </ul>
+
+       </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="full" color="secondary">Book Mates</ion-button>
+</ion-content>

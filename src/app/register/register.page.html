@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Register</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-text *ngIf = "incorrect" color="warning" class="error">Incorrect email or password. Please try again. User may already exists</ion-text>
+      <ion-input type="email" class="emailInput" placeholder="Email" [(ngModel)] = "user.email" required></ion-input>
+      <ion-input type="password" class="pwInput" placeholder="Password" [(ngModel)] = "user.password" required></ion-input>
+      <ion-button expand="full" color="secondary" (click)="register()">Register</ion-button>
+      <br><ion-text>Already have an account?</ion-text><br>
+      <a [routerLink] = "['/log-in']">Log in</a>
+      <div id="guestOption"><a [routerLink]="['/services']">Continue as guest</a></div>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

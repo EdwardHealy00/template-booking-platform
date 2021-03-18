@@ -1,20 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      MoveMate
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center"> <img id="logo" src="../../assets/movemate_logo.svg"/> <br> The hassle-free way to move anything </ion-card-title>
+    </ion-card-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-card-content>
+      We connect you with our moving partners on-demand. Click below to start booking.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="full" color="secondary" (click)="navigatetoLogIn()">Get started</ion-button>
 </ion-content>

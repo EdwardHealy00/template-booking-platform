@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Booking</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-progress-bar color="primary" value="0.75"></ion-progress-bar>
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">How many Mates do you need?</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-button expand="full" color="light" (click)="navigateToQuote(80)">
+        <div class="container">
+          <div class="mateIcon">
+            <img src="../../assets/1-helper.svg"/>
+          </div>
+          <div class="mateText">
+            <ion-text>1 Mate</ion-text>
+            <ion-text class="sub">80$/hour</ion-text>
+          </div>
+        </div>
+      </ion-button>
+      <ion-button expand="full" color="light" (click)="navigateToQuote(120)">
+        <div class="container">
+          <div class="mateIcon2">
+            <img src="../../assets/2-helpers.svg"/>
+          </div>
+          <div class="mateText">
+            <ion-text>2 Mates</ion-text>
+            <ion-text class="sub">120$/hour</ion-text>
+          </div>
+        </div>
+      </ion-button>
+      <ion-button expand="full" color="light" (click)="navigateToQuote(160)">
+        <div class="container">
+          <div class="mateIcon">
+            <img src="../../assets/3-helpers.svg"/>
+          </div>
+          <div class="mateText">
+            <ion-text>3 Mates</ion-text>
+            <ion-text class="sub">160$/hour</ion-text>
+          </div>
+        </div>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

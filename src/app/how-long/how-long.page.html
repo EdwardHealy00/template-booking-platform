@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Booking</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-progress-bar color="primary" value="0.5"></ion-progress-bar>
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">When do you need your mates?</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="date-item"><ion-text>What day are you moving?</ion-text></div>
+      <ion-item>
+        <ion-label position="floating">MM/DD/YYYY</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" min="2021-07-09" max="2022-07-09" [value]="date" (ionChange)="changeDate($event)"></ion-datetime>
+      </ion-item>
+      <div class="date-item"><ion-text>How long do you need Mates for?</ion-text></div>
+      <ion-item>
+            <ion-label position="floating">From</ion-label>
+            <ion-datetime displayFormat="H:mm" [min]="minTime" [max]="maxTime" minuteValues="00,15,30,45" [value]="from" (ionChange)="changeFromTime($event)"></ion-datetime>
+            <ion-label position="floating">to</ion-label>
+            <ion-datetime displayFormat="H:mm" [min]="from" [max]="maxTime" minuteValues="00,15,30,45" [value]="to" (ionChange)="changeToTime($event)"></ion-datetime>
+      </ion-item>
+
+      <ion-button expand="full" color="secondary" (click)="navigateToHowMany()">Next step</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
