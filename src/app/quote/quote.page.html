@@ -18,7 +18,7 @@
          <ion-text><b>Summary:</b></ion-text>
          <ul>
            <li>{{getOrderType()}}</li>
-           <li>For {{formService.user.email}}</li>
+           <li>For {{getEmailAddress()}}</li>
            <li>Date: {{formService.time.date.slice(0, formService.time.date.indexOf("T"))}}</li>
            <li>From: {{formService.time.from}} to {{formService.time.to}}</li>
            <li>{{formService.hourlyPrice}}$ per hour</li>

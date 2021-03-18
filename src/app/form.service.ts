@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class FormService {
 
   user = {
-    email: 'guest', password: ''
+    email: '', password: ''
   }
 
   deliveryMode: boolean;

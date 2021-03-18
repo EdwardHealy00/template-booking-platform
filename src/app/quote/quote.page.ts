@@ -12,8 +12,13 @@ export class QuotePage {
   }
 
   getOrderType(): string{
-    if(this.formService.deliveryMode) return "Delivery"
-    else return "Residential Move";
+    if (this.formService.deliveryMode) { return 'Delivery'}
+    else { return 'Residential Move'; }
+  }
+
+  getEmailAddress(): string{
+    if (this.formService.user.email === '') { return 'guest'; }
+    else { return this.formService.user.email; }
   }
 
 }
